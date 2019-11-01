@@ -82,6 +82,22 @@ color: ivory;
   color: white;
   padding-top: 20px;
 }
+
+.error-display
+{
+  width: 30%;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-left: 35%;
+  font-size: 20px;
+}
+.specific-error ul  li
+{
+ list-style: none;
+ color: red;
+ font-size: 30px;
+ padding-top: 10px;
+}
 /** for edit special...**/
 .signup-form h3{
   text-align: center;
