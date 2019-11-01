@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyPortfolio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+    <% elsif alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+  <% else %>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:p, value, class: "alert alert-#{key}") %>
+    <% end %>
+<% end %>
+    <%= yield %>
+  </body>
+</html>

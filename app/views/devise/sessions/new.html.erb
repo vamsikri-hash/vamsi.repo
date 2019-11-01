@@ -1,0 +1,30 @@
+<section class="signup-form">
+<section class="innner-model">
+<h2>Log In</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "emailadd",placeholder: "enter the email" %>
+  </div>
+
+  <div class="field">
+
+    <%= f.password_field :password, autocomplete: "current-password",class: "pswd", placeholder:"enter the password " %>
+  </div>
+<!--
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+  -->
+
+  <div class="actions">
+    <%= f.submit "Log in",class:"button-1" %>
+  </div>
+<% end %>
+<p>Not yet signedup, here you can</p>
+<%= render "devise/shared/links" %>
+</section>
+</section>

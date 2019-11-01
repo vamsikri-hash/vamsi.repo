@@ -1,0 +1,39 @@
+<section>
+<header class="github-header">
+<div class="g-title">MY GITHUB INFO</div>
+<nav class="g-links">
+<a href="<%= root_path%>">Home</a>
+</nav>
+</header>
+
+<div class="jumbotron medium-size" style="background-color: white">
+  <h1 class="display-4">Hello,</h1>
+  <p class="lead">This is vamsikri-hash(My Github username)</p>
+  <hr class="my-4">
+  <p>This page shows the brief Info about My Github withuout going to My Github Account . The Basic repository details will be available here .
+  If you want to see my
+  full profile you can click below button.If you wnat to say something to me <a href="<%=new_contact_path%>">Click here</a></p>
+  <a class="btn btn-primary btn-lg" href="https://github.com/vamsikri-hash" role="button">View More</a>
+</div>
+
+<section class="repos-list">
+<div class="more-repos">
+<%@repos_from_github.each do |repo|%>
+<div class="card" >
+
+  <div class="card-body">
+    <div>
+    <h5 class="card-title"><%=repo.name%></h5>
+    <div>Pushed On   <%=repo.pushed_at.to_date.strftime("%d %B, %Y")%></div>
+    </div>
+    <a href="<%=repo.html_url%>" class="btn btn-primary  resize">view Source code</a>
+  </div>
+</div>
+<% end %>
+</div>
+<div class="contact-info">
+</div>
+
+</section>
+
+<section>

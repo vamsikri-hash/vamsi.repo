@@ -1,0 +1,2 @@
+module GithubPagesHelper
+end

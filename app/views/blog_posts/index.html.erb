@@ -1,0 +1,74 @@
+<section class="blog-page">
+<div>
+<div class="head">
+<div class="hd-style2">Vamsi Bellam</div>
+<div class="t-links">
+<div class="bgpage-links"><a href="<%=root_path%>">Home</a></div>
+<div class="bgpage-links"><a href="#">About</a></div>
+<% if user_signed_in?%>
+<% if current_user.admin?%>
+<div class="bgpage-links"><a href="<%= new_blog_post_path%>">Create Post</a></div>
+<%end%>
+<%end%>
+<span class="bgpage-links">
+    <% if user_signed_in? %>
+
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+     <!-- <span class="login-name"> Logged in as <strong><%= current_user.email %></strong> <span> -->
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <% end %>
+  </span>
+  <div class="hd-style3">Vamsi Bellam</div>
+</div>
+</div>
+<div class="hr-line2"></div>
+</div>
+
+<h2 class="hd-style">My Blog Posts </h2>
+
+<!--<div class="hr-line"></div>-->
+
+<div class="total-posts">
+
+<% @blog_posts.each do |post| %>
+<div>
+  <div class="single-post" >
+    <p><span class="post-day"><%=post.created_at.to_date.strftime("%d %B, %Y") %></span></p>
+  <div class="post-title"><%= link_to post.title, blog_post_path(post) %>
+
+
+  </div>
+  <div class="post-det">
+  <p class="likes-count"><%= post.likes.count %></p>
+  <%if user_signed_in?%>
+  <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+  <%end%>
+  <% if pre_like %>
+      <%= link_to(blog_post_like_path(post,pre_like), method: :delete)  do %>
+       <%= inline_svg "love2.svg" , class: "svg-model-filled"%>
+     <% end %>
+  <% else %>
+     <%= link_to(blog_post_likes_path(post), method: :post)  do %>
+       <%= inline_svg "like.svg" , class: "svg-model"%>
+     <% end %>
+  <% end %>
+
+
+
+   <!--
+  <div class=p-comments><%=post.comments.count%><%=fa_icon "comments" ,class:"comment-gap"%> </div>  -->
+    <div class=p-comments><%=post.comments.count%> <%= inline_svg "comment-white-oval-bubble.svg" , class: "svg-comment"%> </div>
+</div>
+  </div>
+  </div>
+<% end %>
+
+<div class="pagination-center">
+<%= will_paginate @blog_posts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer  %>
+</div>
+</div>
+
+</section>

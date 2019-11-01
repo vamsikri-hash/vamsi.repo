@@ -1,0 +1,115 @@
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contact-form
+{
+  background-color: #313840;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  text-align: center;
+}
+.inner-section
+{
+  width:800px;
+  margin-left:20%;
+}
+.contact-form h2{
+  text-align: center;
+  color: white;
+  padding-top:7%;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 50px;
+}
+.name-detail,.email-detail,.message-details
+{
+
+  background: none;
+  border:none;
+  outline: none;
+  border-bottom: 2px solid #888;
+  width: 500px;
+  color: aliceblue;
+  padding: 10px 6px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 25px;
+
+}
+.email-detail
+{
+  margin-left: 30px;
+}
+.message-details
+{
+  width: 800px;
+}
+
+
+
+.button-message
+{
+  background: none;
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-size: 20px;
+  transition: 0.6s linear;
+  cursor: pointer;
+}
+.button-message:hover{
+background: #2ecc71;
+color: ivory;
+}
+
+.two-together
+{
+  display: inline-flex;
+}
+
+.button-home
+{
+  background: none;
+  border: 1px solid #1e90ff;
+  color: #1e90ff;
+  border-radius: 8px;
+  padding: 13px 35px;
+  font-size: 20px;
+  transition: 0.6s linear;
+  cursor: pointer;
+  margin-left:50%;
+}
+.button-home:hover{
+background: #1e90ff;
+color: ivory;
+text-decoration: none;
+}
+
+
+/*** for smaller width ****/
+@media screen and (max-width:1300px) {
+  .two-together
+  {
+    display: block;
+  }
+  .inner-section
+  { width: 100%;
+    margin-left: 0%;
+
+ }
+ .email-detail
+ {
+   margin-left: 0;
+ }
+ .message-details
+ {
+   width: 500px;
+ }
+ .button-home
+ {
+   margin-left: 2%;
+ }
+}

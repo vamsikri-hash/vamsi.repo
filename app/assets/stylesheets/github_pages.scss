@@ -1,0 +1,114 @@
+// Place all the styles related to the GithubPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.medium-size
+{
+  width: 60%;
+  margin-left: 15%;
+
+}
+
+.github-header
+{
+  z-index: 32;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: hsla(0,0%,100%,.7);
+    background-color: #24292e;
+    height: 100px;
+    display: flex;
+
+
+}
+.g-title
+{
+  margin-left: 20%;
+  color: white;
+  font-size:40px ;
+
+}
+
+.g-links
+{
+  float:right;
+  padding: 15px 15px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.g-links a{
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 600;
+}
+.g-links a:hover
+{
+
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.card-title
+{
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+
+.repos-list
+{
+background-color: #f6f8fa;
+display: flex;
+}
+.more-repos
+{
+  width: 100%;
+}
+
+
+.card
+{
+  margin-left: 17%;
+  height: 200px;
+  width: 50rem;
+
+}
+.card-body
+{
+  display: flex;
+  margin-top: 3rem;
+}
+
+.resize
+{
+  height: 2.5rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+@media screen and (max-width:1042px) {
+
+  .card-body
+  {
+    display: block;
+    margin-top: 1rem;
+  }
+  .card
+  {
+    margin-left: 10px;
+    width: 28rem;
+  }
+.g-title
+{
+  margin-left: 15%;
+  color: white;
+  font-size:27px ;
+
+}
+  }

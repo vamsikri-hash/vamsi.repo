@@ -1,0 +1,24 @@
+<section class="contact-form">
+<section class="inner-section">
+
+<h2>Send Your Message</h2>
+<%= form_for(@contact) do |f| %>
+    <div class="two-together">
+    <div class="field">
+    <%= f.text_field :name,  placeholder: "Your Name",class:"name-detail"%>
+    </div>
+    <br/>
+    <div class="field">
+    <%= f.email_field :email,  placeholder: "Your email", class:"email-detail"%>
+     </div>
+     </div>
+     <div class=field>
+    <%= f.text_area :message,  rows: 5,placeholder: "Write your Message", class:"message-details"%>
+    <br/>
+    </div>
+    <%= f.submit  "send message", class: "button-message"%>
+     <%= link_to " Home", root_path , class:"button-home" %>
+
+<% end %>
+</section>
+</section>

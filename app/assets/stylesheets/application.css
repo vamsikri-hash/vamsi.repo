@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+
+
+ .alert
+ {
+   text-align:center;
+ }
+
+
+
+/*** styles for signup pages **/
+
+.signup-form
+{
+  background-color: #313840;
+  width: 100%;
+  min-height: 100vh;
+height: auto;
+  text-align: center;
+}
+.inner-model
+{
+  width: 600px;
+}
+.signup-form h2{
+  text-align: center;
+  color: white;
+  padding-top:7%;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: none;
+}
+
+.emailadd,.pswd,.pswdconfirm
+{
+  background: none;
+  border:none;
+  outline: none;
+  border-bottom: 2px solid #888;
+  width: 500px;
+  color: aliceblue;
+  padding: 10px 6px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 25px;
+
+}
+
+.button-1
+{
+  background: none;
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-size: 20px;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+.button-1:hover{
+background: #2ecc71;
+color: ivory;
+}
+.signup-form p
+{
+  font-size: 20px;
+  color: white;
+  padding-top: 20px;
+}
+/** for edit special...**/
+.signup-form h3{
+  text-align: center;
+  color: white;
+  padding-top:4%;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.button-2
+{
+  background: none;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-size: 20px;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+.button-2:hover{
+background: #c0392b;
+color: ivory;
+}
+@import 'pygments';

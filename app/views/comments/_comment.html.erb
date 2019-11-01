@@ -1,0 +1,15 @@
+<div class="cm-del">
+<div style="display:flex"><%= markdown comment.comment%>
+<%if user_signed_in?%>
+<% if current_user.id==comment.user_id%>
+<div class="del-option">
+<%= link_to(blog_post_comment_path(comment.blog_post,comment), method: :delete)  do %>
+       <%= inline_svg "delete.svg" , class: "svg-delete "%>
+     <% end %>
+
+</div>
+<%end%>
+<%end%></div>
+<div><div class="commenter-name">Commented by <strong><%=comment.user_name%></strong></div></div>
+
+</div>

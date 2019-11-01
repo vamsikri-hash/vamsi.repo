@@ -1,0 +1,37 @@
+<section class="full-page">
+<div class="content-1">
+<div>
+<div class="head">
+
+<div class="hd-style2">Vamsi Bellam</div>
+<div class="t-links">
+<div class="bgpage-links"><a href="<%=blog_posts_path%>">BlogPosts</a></div>
+<%if user_signed_in?%>
+<% if current_user.admin?%>
+<div class="bgpage-links"><a href="<%=edit_blog_post_path%>">Edit Post</a></div>
+<div class="bgpage-links"><%= link_to 'Delete Post', blog_post_path, method: :delete, data:{confirm: "Are you sure to delete post?"} %></div>
+<%end%>
+<%else%>
+<%end%>
+<div class="hd-style3">Vamsi Bellam</div>
+</div>
+</div>
+</div>
+<div class="hr-line2">
+</div>
+<h1><%=@blog_post.title%></h1>
+
+<div class="content-size">
+<%=markdown(@blog_post.content)%>
+</div>
+</div>
+<div class="comment-box">
+<label style="padding-top:20px"><strong>Comments</strong></label>
+<div class="comment-details">
+<%= render @blog_post.comments %>
+</div>
+<%if user_signed_in?%>
+<%= render 'comments/new'%>
+<%end%>
+</div>
+</section>
