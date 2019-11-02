@@ -4,7 +4,8 @@
 <div class="hd-style2">Vamsi Bellam</div>
 <div class="t-links">
 <div class="bgpage-links"><a href="<%=root_path%>">Home</a></div>
-<div class="bgpage-links"><a href="#">About</a></div>
+<!--
+<div class="bgpage-links"><a href="#">About</a></div> -->
 <% if user_signed_in?%>
 <% if current_user.admin?%>
 <div class="bgpage-links"><a href="<%= new_blog_post_path%>">Create Post</a></div>
