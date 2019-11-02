@@ -2,7 +2,7 @@ class BlogPostsController < ApplicationController
   before_action :authenticate_user!, :except => [:show, :index]
 
   def index
-    @blog_posts = BlogPost.order("created_at DESC").paginate(page: params[:page], per_page: 5)
+    @blog_posts = BlogPost.order("created_at DESC").paginate(page: params[:page], per_page: 4)
   end
 
   def new
