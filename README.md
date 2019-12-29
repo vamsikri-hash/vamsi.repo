@@ -1,24 +1,5 @@
-# README
+#### My personal website built on ruby on rails.\
+[View Here](http://vamsibellam-me.herokuapp.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+if any issues regarding site or code you can make [issue here](https://github.com/vamsikri-hash/vamsi.website/issues)/ you can [write here](https://vamsibellam-me.herokuapp.com/contacts/new)
