@@ -3,6 +3,17 @@
 <header>
 
 <nav class="my-navbar">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="<%= github_pages_path%>">My Github</a>
+    <a href="<%= tweets_path%>">My Tweets</a>
+    <a href="<%= new_contact_path%>">Contact</a>
+    <a href="<%=blog_posts_path%>">My Blog</a>
+  </div>
+</div>
+<span class="mb-browser" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 <ul>
 <!--
 <li>
@@ -59,3 +70,14 @@
 </div>
 </div>
 </div>
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
